@@ -15,6 +15,9 @@
   border-top-color:#E4ECEF;
   background-color: #F5FCFE;
 }
+.modal-body,.modal-body>.row,.modal-body>.row>[class^=col-]{
+  height: 350px;
+}
 .modal-content{
   border-radius: 3px;
   border: none;

@@ -30,8 +30,9 @@ function ($scope, $modal, storage) {
                 }
             }
         });
-        settingsPopup.result.then(function(settings){
-            storage.set('settings', settings);
-        });
+        settingsPopup.result
+            .then(function(settings){
+                storage.set('settings', settings);
+            });
     };
 }]);
