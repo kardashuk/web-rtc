@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name webRtcApp.controller:MainCtrl
+ * @name webRtcApp.controller:AppCtrl
  * @description
- * # MainCtrl
+ * # AppCtrl
  * Controller of the webRtcApp
  */
 angular.module('webRtcApp')
-.controller('MainCtrl',
+.controller('AppCtrl',
 ['$scope',
 function ($scope) {
 

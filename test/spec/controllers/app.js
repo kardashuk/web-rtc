@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: AboutCtrl', function () {
+describe('Controller: AppCtrl', function () {
 
   // load the controller's module
   beforeEach(module('webRtcApp'));
 
-  var AboutCtrl,
+  var AppCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    AppCtrl = $controller('AppCtrl', {
       $scope: scope
     });
   }));
