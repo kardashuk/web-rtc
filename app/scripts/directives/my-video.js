@@ -9,7 +9,7 @@
 angular.module('webRtcApp')
   .directive('myVideo', function () {
     return {
-      template: '<div class="my-video"><video autoplay  /></div>',
+      template: '<div class="my-video"><video autoplay ></video></div>',
       restrict: 'E',
       link: function(scope, el){
           var video = angular.element(el).find('video')[0];

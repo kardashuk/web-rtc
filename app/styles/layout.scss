@@ -1,0 +1,26 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: #33353A;
+}
+h1,h2,h3,h4,h5,b,strong{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+html,body,.main-container, .main-container>.row{
+  height: 100%;
+}
+.main-container>.row>[class^=col-]{
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.menu-column{
+  background-color: #F5FCFE;
+  border-right:1px solid #E4ECEF;
+}
+.adv-column{
+  background-color: #F5FCFE;
+  border-left:1px solid #E4ECEF;
+}

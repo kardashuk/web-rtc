@@ -1,0 +1,25 @@
+$brand-success:                   #00AFF0 !default;
+
+$border-radius-base:      2px !default;
+$border-radius-small:     2px !default;
+$border-radius-large:     2px !default;
+
+$btn-info-color:                  #00AFF0 !default;
+$btn-info-bg:                     rgba(0,0,0,0) !default;
+$btn-info-border:                 rgba(0,0,0,0) !default;
+
+$panel-border-radius:             0px !default;
+$modal-inner-padding:             0px 15px !default;
+$modal-content-border-color:      #E4ECEF !default;
+
+.btn.btn-info{
+  padding:13px 15px;
+  margin: -13px -15px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.icon{
+  font-size: 24px;
+  line-height: 24px;
+}

@@ -1,0 +1,23 @@
+<div class="col-sm-3 menu-column">
+    <ul class="settings-list">
+        <li ng-repeat="(name, title) in settingsNames" ng-click="settings._current=name" ng-class="{current:settings._current==name}">{{title}}</li>
+    </ul>
+</div>
+<div class="col-sm-9 main-column">
+    <div ng-if="settings._current == 'photo'" id="photoSetting">
+        <div class="row">
+            <div class="col-sm-6">
+                <b>Current:</b><br/>
+                <div class="my-photo"><img src="{{settings.photo}}"/></div>
+                <canvas style="display: none"></canvas>
+            </div>
+            <div class="col-sm-6">
+                <br/>
+                <my-video></my-video>
+                <button class="btn btn-success" ng-click="takeSnapshot()">
+                    <i class="icon glyphicon glyphicon-camera"></i> &nbsp; Take snapshot
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

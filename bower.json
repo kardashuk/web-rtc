@@ -11,7 +11,10 @@
     "angular-sanitize": "~1.2.0",
     "angular-animate": "~1.2.0",
     "angular-touch": "~1.2.0",
-    "angular-route": "~1.2.0"
+    "angular-route": "~1.2.0",
+    "angular-bootstrap": "~0.12.1",
+    "angular-ui-utils": "#5814d4c5f5edf8111744db2e12acd1b80e653f8f",
+    "angular-local-storage": "~0.2.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
