@@ -4,6 +4,7 @@
     </ul>
 </div>
 <div class="col-sm-9 main-column">
+
     <div ng-if="settings._current == 'photo'" id="photoSetting">
         <div class="row">
             <div class="col-sm-6">
@@ -17,6 +18,39 @@
                 <button class="btn btn-success" ng-click="takeSnapshot()">
                     <i class="icon glyphicon glyphicon-camera"></i> &nbsp; Take snapshot
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="settings._current == 'camera'" id="cameraSetting">
+        <div class="row">
+            <div class="col-sm-6">
+                <my-video></my-video>
+                <div class="btn-toolbar" role="toolbar" >
+                    <div class="btn-group" role="group"
+                         ng-repeat="r in userVideo.videoResolution" ng-click="userVideo.setResolution(r)">{{r}}</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label ng-repeat="v in userVideo.getDevices().video">
+                    <input type="radio" name="camera" value="{{v.id}}" ng-checked="v.selected"
+                           ng-model="selectedCamera"
+                           ng-change="userVideo.setCamera(v.id)"/> {{v.name}}<br/>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div ng-if="settings._current == 'sound'" id="soundSetting">
+        <div class="row">
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-6">
+                <label ng-repeat="a in userVideo.getDevices().audio">
+                    <input type="radio" name="audio" value="{{a.id}}" ng-checked="a.selected"
+                           ng-model="selectedMicrophone"
+                           ng-change="userVideo.setMicrophone(a.id)"/> {{a.name}}
+                </label>
             </div>
         </div>
     </div>

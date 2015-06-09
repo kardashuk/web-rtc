@@ -7,34 +7,21 @@
  * # myVideo
  */
 angular.module('webRtcApp')
-  .directive('myVideo', function () {
+  .directive('myVideo', ['navigator','$rootScope', function (navigator, $rootScope) {
     return {
       template: '<div class="my-video"><video autoplay ></video></div>',
       restrict: 'E',
       link: function(scope, el){
           var video = angular.element(el).find('video')[0];
-          var constraints = {
-              audio: false,
-              video: true
-          };
-
-          navigator.getUserMedia = navigator.getUserMedia ||
-              navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-          function successCallback(stream) {
-              window.stream = stream; // stream available to console
+          var attachMediaStream = function( stream){
               if (window.URL) {
                   video.src = window.URL.createObjectURL(stream);
               } else {
                   video.src = stream;
               }
-          }
-
-          function errorCallback(error) {
-              console.log('navigator.getUserMedia error: ', error);
-          }
-
-          navigator.getUserMedia(constraints, successCallback, errorCallback);
+          };
+          navigator.getStream().then(attachMediaStream);
+          $rootScope.$on('videoStream', function(e,stream){attachMediaStream(stream);});
       }
     };
-  });
+  }]);
